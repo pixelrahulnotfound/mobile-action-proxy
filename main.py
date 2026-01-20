@@ -4,10 +4,10 @@ from mobilerun import Mobilerun
 from actions import set_action, clear_action
 
 client = Mobilerun(
-    api_key="dr_sk_LwGdCDUqVEfDtruQYfKeMxNYlcenzMTZnbMactvhPdtxjGDEiIZEbPeZQlsSijBC"
+    api_key=os.environ.get("MOBILERUN_CLOUD_API_KEY")
 )
 
-DEVICE_ID = "5b444e55-31a8-4407-90c9-0407e10acea2"
+DEVICE_ID = input("enter device id: ")
 
 set_action("OPEN_PROFILE")
 target_app=input("enter the target app: ")
